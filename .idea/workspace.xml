@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kBoN1O1gAd4jFuei0eQ7dVucyh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\alex\social\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\components\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\components\header" />
+      <recent name="D:\alex\social\src\redux" />
+      <recent name="D:\alex\social\src\components\profile" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="" />
+      <created>1605183301889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605183301889</updated>
+      <workItem from="1605183303074" duration="160000" />
+      <workItem from="1605193584778" duration="10000" />
+      <workItem from="1605611535152" duration="856000" />
+      <workItem from="1605612401036" duration="3579000" />
+      <workItem from="1605625251535" duration="1446000" />
+      <workItem from="1605689621203" duration="9897000" />
+      <workItem from="1605711382274" duration="77000" />
+      <workItem from="1605773396150" duration="2644000" />
+      <workItem from="1605781345889" duration="1734000" />
+      <workItem from="1605797158743" duration="120000" />
+      <workItem from="1605855761543" duration="3702000" />
+      <workItem from="1605953331376" duration="1598000" />
+      <workItem from="1605954943185" duration="3583000" />
+      <workItem from="1605973211092" duration="3000" />
+      <workItem from="1606120722649" duration="17435000" />
+      <workItem from="1606144909927" duration="2370000" />
+      <workItem from="1606205283715" duration="5497000" />
+      <workItem from="1606401486681" duration="86000" />
+      <workItem from="1607009709166" duration="206000" />
+      <workItem from="1607068170510" duration="600000" />
+      <workItem from="1607677748376" duration="3565000" />
+      <workItem from="1607698489120" duration="746000" />
+      <workItem from="1608307200788" duration="5178000" />
+      <workItem from="1608798599853" duration="4612000" />
+      <workItem from="1609144265993" duration="2941000" />
+      <workItem from="1610008779979" duration="4777000" />
+      <workItem from="1610714885486" duration="15708000" />
+      <workItem from="1611130606763" duration="3100000" />
+      <workItem from="1612181669449" duration="624000" />
+      <workItem from="1612773425443" duration="2097000" />
+      <workItem from="1613488241359" duration="600000" />
+      <workItem from="1613992129487" duration="10103000" />
+      <workItem from="1614082342763" duration="1167000" />
+      <workItem from="1614083530646" duration="3240000" />
+      <workItem from="1614086787775" duration="404000" />
+      <workItem from="1614584890468" duration="2958000" />
+      <workItem from="1614588609318" duration="407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="684" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608803811084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="684" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608803811084" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614588256492">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614588256492" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1614587811599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1614587811599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1614587811599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1614587811599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1610723607745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610723607745" />
+  </component>
+</project>

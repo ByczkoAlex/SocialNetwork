@@ -1,0 +1,13 @@
+.photo {
+    border-radius: 20px;
+    width:200px;
+    height:200px;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.pointer {
+    cursor: pointer;
+}

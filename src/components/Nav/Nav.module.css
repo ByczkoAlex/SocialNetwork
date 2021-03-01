@@ -1,0 +1,29 @@
+.nav {
+    grid-area: nav;
+    /*background-color: #b56422;*/
+    height: 100%;
+    margin-right: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0.16, 0, 0, 0.16);
+}
+
+.item {
+    font-size: 17px;
+    margin: 0 25px;
+    line-height: 1.4em;
+}
+
+
+
+.active {
+    color: #20ff8a;
+}
+
+a {
+    text-decoration: none;
+    color: #000
+}
+
+a:hover {
+    color: #20ff8a;
+    transition-duration: 0.3s;
+}
