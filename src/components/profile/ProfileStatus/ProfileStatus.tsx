@@ -11,7 +11,7 @@ class ProfileStatus extends React.Component <PropsType> {
         title: 'yo'
     }
 
-    activateEditMode () {
+    activateEditMode = () => {
         this.setState({
             editMode: true
         })
@@ -28,7 +28,7 @@ class ProfileStatus extends React.Component <PropsType> {
             <div>
                 {!this.state.editMode &&
                     <div>
-                        <span onDoubleClick={this.activateEditMode.bind(this)}>{this.props.status}</span>
+                        <span onDoubleClick={this.activateEditMode}>{this.props.status}</span>
                     </div>
                 }
                 {this.state.editMode &&

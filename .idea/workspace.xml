@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="" />
+    <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todolist-16" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\alex\social\node_modules\typescript\lib" />
@@ -93,7 +97,14 @@
       <workItem from="1614083530646" duration="3240000" />
       <workItem from="1614086787775" duration="404000" />
       <workItem from="1614584890468" duration="2958000" />
-      <workItem from="1614588609318" duration="407000" />
+      <workItem from="1614588609318" duration="2714000" />
+      <workItem from="1614595168787" duration="12000" />
+      <workItem from="1614600401326" duration="80000" />
+      <workItem from="1614602663132" duration="1901000" />
+      <workItem from="1614608112386" duration="437000" />
+      <workItem from="1614625718887" duration="719000" />
+      <workItem from="1614802426951" duration="1607000" />
+      <workItem from="1614930780571" duration="509000" />
     </task>
     <servers />
   </component>
@@ -105,10 +116,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="684" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608803811084" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614588256492">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614930807370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614588256492" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614930807370" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614802697964">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614802697964" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1614587811599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

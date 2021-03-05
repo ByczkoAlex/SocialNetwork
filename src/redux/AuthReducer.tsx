@@ -22,7 +22,8 @@ let initialState= {
     id: null as number | null,
     email: null as string | null,
     login: null as string | null,
-    isAuth: null as boolean | null
+    // isAuth: null as boolean | null
+    isAuth: true
 };
 
 export type InitialType = typeof  initialState
