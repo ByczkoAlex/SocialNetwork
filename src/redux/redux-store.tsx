@@ -1,5 +1,11 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
-import ProfileReducer, {AddPostActionType, ChangePostActionType, SetUserProfileActionType} from "./profileReducer";
+import { reducer as formReducer } from 'redux-form'
+import ProfileReducer, {
+    AddPostActionType,
+    ChangePostActionType,
+    SetUserProfileActionType,
+    SetUserStatusActionType
+} from "./profileReducer";
 import DialogsReducer, {SendMessageActionType, UpdateNewMessageActionType} from "./dialogsReducer";
 import UserReducer, {
     FollowActionType,
@@ -23,7 +29,8 @@ export type ActionsTypes = AddPostActionType |
     setIsFetchingActionType |
     SetUserProfileActionType |
     SetUsersDataActionType |
-    setIsFollowingToggleActionType
+    setIsFollowingToggleActionType |
+    SetUserStatusActionType
 
 
 
@@ -33,7 +40,8 @@ let RootReducer = combineReducers({
     ProfileReducer,
     DialogsReducer,
     UsersReducer,
-    AuthReducer
+    AuthReducer,
+    form: formReducer
     // SidebarReducer
 });
 
