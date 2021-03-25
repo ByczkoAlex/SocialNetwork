@@ -1,9 +1,10 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import s from './Dialogs.module.css'
 import Dialog from "./DialogsItem/DialogsItem";
 import Message from "./Messages/Messages";
 import {MapStateToPropsType1, MapDispatchToPropsType1} from './dialogsContainer';
-import { Redirect } from 'react-router-dom';
+import {InjectedFormProps, Field} from "redux-form";
+import {reduxForm} from "redux-form";
 
 export type MessageType = {
     id: number
@@ -14,14 +15,9 @@ export type DialogType = {
     name: string
 }
 
-export type messagesPage = {
-    dialogData: Array<DialogType>
-    messagesData: Array<MessageType>
+type FormDataType = {
     newMessageBody: string
-    UpdateNewMessageBody: () => void
-    sendMessage: () => void
 }
-
 
 function Dialogs(props: MapStateToPropsType1 & MapDispatchToPropsType1) {
 
@@ -30,25 +26,12 @@ function Dialogs(props: MapStateToPropsType1 & MapDispatchToPropsType1) {
     let dialogsElements = state.dialogData.map((d: DialogType) => <Dialog id={d.id} key={d.id} name={d.name}/>);
     let messagesElements = state.messagesData.map((m: MessageType) => <Message key={m.id} message={m.message}/>);
 
-    let NewPostElement = React.createRef<HTMLTextAreaElement>();
-
-    let onSendMessageClick = () => {
-        if (NewPostElement.current) {
-            props.sendMessage();
-        }
-    };
-
-
-    let onNewMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        if (NewPostElement.current) {
-            props.UpdateNewMessageBody(e.currentTarget.value);
-        }
-    };
-
+    let addNewMessage = (values:any) => {
+        props.sendMessage(values.newMessageBody)
+    }
 
 
     return (
-
         <div className={s.dialogs}>
             <div className={s.dialogs_item}>
                 {dialogsElements}
@@ -56,14 +39,8 @@ function Dialogs(props: MapStateToPropsType1 & MapDispatchToPropsType1) {
             <div className={s.messages}>
                 <div>{messagesElements}</div>
                 <div>
-                    <div><textarea placeholder="enter your message"
-                                   value={props.dialogsPage.newMessageBody}
-                                   onChange={onNewMessageChange}
-                                   ref={NewPostElement}>
-                         </textarea>
-                    </div>
                     <div>
-                        <button onClick={onSendMessageClick}>send</button>
+                        <AddMessageFormRedux onSubmit={addNewMessage}/>
                     </div>
                 </div>
             </div>
@@ -71,5 +48,19 @@ function Dialogs(props: MapStateToPropsType1 & MapDispatchToPropsType1) {
 
     )
 }
+
+const AddMessageForm: React.FC<InjectedFormProps<FormDataType>> = (props:any) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <div>
+                <Field component={"textarea"} name={"newMessageBody"} placeholder={"enter your message"} />
+            </div>
+            <div><button>send</button></div>
+        </form>
+    )
+}
+
+const AddMessageFormRedux = reduxForm<any>({form: "DialogAddMessageForm"})(AddMessageForm)
+
 
 export default Dialogs

@@ -2,7 +2,7 @@ import React, {Dispatch} from 'react';
 import {MyPosts} from "../myPosts";
 import {connect} from "react-redux";
 import {ActionsTypes, RootStateRedux} from "../../../../redux/redux-store";
-import {AddPostActionCreator, OnPostChangeActionCreator} from "../../../../redux/profileReducer";
+import {AddPostActionCreator} from "../../../../redux/profileReducer";
 
 export type myPosts = {
     postsData: Array<PostType>
@@ -22,33 +22,24 @@ export type OwnProps = {
 
 export type MapStateToPropsType = {
     posts: Array<PostType>
-    newPostText: string
 }
 
 export type MapDispatchToPropsType = {
-    addPost: () => void
-    updateNewPostText: (newPost: string) => void
+    addPost: (newPostText:string) => void
 }
 
 
 const mapStateToProps = (state:RootStateRedux) => {
     return {
         posts: state.ProfileReducer.profilePage.postsData,
-        newPostText: state.ProfileReducer.profilePage.newPostText,
     };
 };
 
 const mapDispatchToProps = (dispatch:  Dispatch<ActionsTypes>) => {
     return {
-
-        addPost: () => {
-            dispatch(AddPostActionCreator());
+        addPost: (newPost: string) => {
+            dispatch(AddPostActionCreator(newPost));
         },
-        updateNewPostText: (newPost: string) => {
-            debugger
-            let action = OnPostChangeActionCreator(newPost);
-            dispatch(action);
-        }
     }
 };
 

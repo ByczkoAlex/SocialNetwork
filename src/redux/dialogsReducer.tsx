@@ -1,23 +1,15 @@
-import {ChangeEvent} from "react";
 import {ActionsTypes} from "./redux-store";
-
-const UPDATE_NEW_MESSAGE_BODY = "UPDATE_NEW_MESSAGE_BODY";
 const SEND_MESSAGE = "SEND_MESSAGE";
 
 export type SendMessageActionType = {
     type: typeof SEND_MESSAGE,
-}
-export type UpdateNewMessageActionType = {
-    type: typeof UPDATE_NEW_MESSAGE_BODY,
-    payload: string
+    newMessageBody:string
 }
 
-export const SandMessageCreator = (): SendMessageActionType => ({type: SEND_MESSAGE,});
-export const UpdateNewMessageBodyCreator = (newText: string): UpdateNewMessageActionType => ({
-    type: UPDATE_NEW_MESSAGE_BODY,
-    payload: newText
+export const SandMessageCreator = (newMessageBody:string): SendMessageActionType => ({
+    type: SEND_MESSAGE,
+    newMessageBody: newMessageBody
 });
-
 
 export type MessageType = {
     id: number
@@ -31,7 +23,6 @@ export type DialogType = {
 export type messagesPage1 = {
     dialogData: Array<DialogType>
     messagesData: Array<MessageType>
-    newMessageBody: string
 }
 
 
@@ -51,31 +42,21 @@ let initialState = {
             {id: 4, message: "Gutten Tag"},
             {id: 5, message: "yo"}
         ],
-        newMessageBody: ""
     },
 };
 
-const DialogsReducer = (state = initialState, action: ActionsTypes) => {
+export type InitialProfileType = typeof initialState
+
+const DialogsReducer = (state: InitialProfileType = initialState, action: ActionsTypes): InitialProfileType => {
     switch (action.type) {
-        case "UPDATE_NEW_MESSAGE_BODY":
-            return {
-                ...state,
-                dialogsPage: {
-                    ...state.dialogsPage,
-                    newMessageBody: action.payload,
-                },
-
-            };
         case "SEND_MESSAGE":
-            let body = state.dialogsPage.newMessageBody;
+            let body = action.newMessageBody;
             return {
                 ...state,
                 dialogsPage: {
                     ...state.dialogsPage,
-                    messagesData: [...state.dialogsPage.messagesData, {id: 6, message: state.dialogsPage.newMessageBody}],
-                    newMessageBody: ""
+                    messagesData: [...state.dialogsPage.messagesData, {id: 6, message: body}],
                 }
-
             };
         default:
             return state;

@@ -1,6 +1,6 @@
 import Dialogs from "./dialogs";
 import {connect} from "react-redux";
-import {messagesPage1, SandMessageCreator, UpdateNewMessageBodyCreator} from "../../redux/dialogsReducer";
+import {messagesPage1, SandMessageCreator} from "../../redux/dialogsReducer";
 import {RootStateRedux} from "../../redux/redux-store";
 import React, {ComponentClass} from "react";
 import {WithAusRedirect} from "../HOC/WithAuthRedirect";
@@ -11,11 +11,10 @@ export type MapStateToPropsType1 = {
 }
 
 export type MapDispatchToPropsType1 = {
-    UpdateNewMessageBody: (newText: string) => void
-    sendMessage: () => void
+    sendMessage: (newMessageBody: string) => void
 }
 
-let MapStateToProps = (state: RootStateRedux): MapStateToPropsType1 => {
+let MapStateToProps = (state: RootStateRedux) => {
     return {
         dialogsPage: state.DialogsReducer.dialogsPage,
     }
@@ -23,11 +22,8 @@ let MapStateToProps = (state: RootStateRedux): MapStateToPropsType1 => {
 
 let MapDispatchToProps = (dispatch: any): MapDispatchToPropsType1 => {
     return {
-        UpdateNewMessageBody: (newText: string) => {
-            dispatch(UpdateNewMessageBodyCreator(newText));
-        },
-        sendMessage: () => {
-            dispatch(SandMessageCreator());
+        sendMessage: (newMessageBody: string) => {
+            dispatch(SandMessageCreator(newMessageBody));
         },
     }
 };
@@ -36,10 +32,3 @@ export default compose(
     connect(MapStateToProps, MapDispatchToProps),
     WithAusRedirect
 )(Dialogs) as ComponentClass
-
-
-// let AuthRedirectComponent = WithAusRedirect(Dialogs)
-//
-// const DialogsContainer = connect(MapStateToProps, MapDispatchToProps)(AuthRedirectComponent);
-//
-// export default DialogsContainer;

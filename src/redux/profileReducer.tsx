@@ -3,13 +3,42 @@ import {PhotosType} from "./UserReducer";
 import {Dispatch} from "redux";
 import {ProfileAPI, UsersAPI} from "../api/Api";
 
+const ADD_POST = "ADD-POST";
+const SET_USER_PROFILE = "SET_USER_PROFILE";
+const SET_STATUS = "SET_STATUS";
+
+export const AddPostActionCreator = (newPost: string): AddPostActionType => ({
+    type: ADD_POST,
+    newPost:newPost
+});
+export type AddPostActionType = {
+    type: typeof ADD_POST
+    newPost: string
+}
+
+export const setUserProfile = (profile: ProfileAPIType): SetUserProfileActionType => ({
+    type: SET_USER_PROFILE,
+    profile
+});
+export type SetUserProfileActionType = {
+    type: typeof SET_USER_PROFILE
+    profile: ProfileAPIType
+}
+
+export const setStatus = (status: string): SetUserStatusActionType => ({
+    type: SET_STATUS,
+    status
+});
+export type SetUserStatusActionType ={
+    type: typeof SET_STATUS,
+    status: string
+}
+
 export type PostType = {
     id: number
     message: string
     likes: string
 }
-
-
 export type ProfileAPIType = {
     userId: number
     lookingForAJob: boolean
@@ -18,7 +47,6 @@ export type ProfileAPIType = {
     contacts: ContactsProfileType
     photos: PhotosType
 }
-
 export type ContactsProfileType = {
     github: string | null
     vk: string | null
@@ -30,42 +58,6 @@ export type ContactsProfileType = {
     mainLink: string | null
 }
 
-export const AddPostActionCreator = (): AddPostActionType => ({type: ADD_POST});
-export const setUserProfile = (profile: ProfileAPIType): SetUserProfileActionType => ({
-    type: SET_USER_PROFILE,
-    profile
-});
-export const setStatus = (status: string): SetUserStatusActionType => ({
-    type: SET_STATUS,
-    status
-});
-export const OnPostChangeActionCreator = (newPost: string): ChangePostActionType => ({
-    type: UPDATE_NEW_POST_TEXT,
-    payload: newPost
-});
-
-
-
-export type SetUserStatusActionType ={
-    type: typeof SET_STATUS,
-    status: string
-}
-export type AddPostActionType = {
-    type: typeof ADD_POST
-}
-export type ChangePostActionType = {
-    type: typeof UPDATE_NEW_POST_TEXT,
-    payload: string
-}
-export type SetUserProfileActionType = {
-    type: typeof SET_USER_PROFILE
-    profile: ProfileAPIType
-}
-
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE_NEW_POST_TEXT";
-const SET_USER_PROFILE = "SET_USER_PROFILE";
-const SET_STATUS = "SET_STATUS";
 
 export const getUserProfile = (userId: number) => (dispatch : Dispatch) =>  {
     UsersAPI.getProfile(userId).then(response => {
@@ -94,7 +86,6 @@ let initialState = {
             {id: 1, message: "Hi! How are you?", likes: "likes: 15"},
             {id: 2, message: "It is my first post", likes: "likes: 17"},
         ],
-        newPostText: "",
         profile: null as ProfileAPIType | null,
         status : '',
     },
@@ -106,7 +97,7 @@ const ProfileReducer = (state: InitialProfileType = initialState, action: Action
         case ADD_POST: {
             let newPost: PostType = {
                 id: new Date().getTime(),
-                message: state.profilePage.newPostText,
+                message: action.newPost,
                 likes: "Likes: 0"
             };
             return {
@@ -114,18 +105,8 @@ const ProfileReducer = (state: InitialProfileType = initialState, action: Action
                 profilePage: {
                     ...state.profilePage,
                     postsData: [newPost, ...state.profilePage.postsData],
-                    newPostText: '',
                 }
 
-            };
-        }
-        case UPDATE_NEW_POST_TEXT: {
-            return {
-                ...state,
-                profilePage: {
-                    ...state.profilePage,
-                    newPostText: action.payload,
-                }
             };
         }
         case SET_USER_PROFILE : {

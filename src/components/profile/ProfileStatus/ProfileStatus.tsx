@@ -1,4 +1,5 @@
 import React, {ChangeEvent} from 'react'
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
 
 type PropsType = {
     status: string
@@ -56,5 +57,18 @@ class ProfileStatus extends React.Component <PropsType> {
 
     }
 }
+
+const UpdateStatusForm: React.FC<InjectedFormProps<any>> = (props:any) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <div>
+                <Field component={"textarea"} name={"newStatus"} placeholder={"enter your status"} />
+            </div>
+        </form>
+    )
+}
+
+const UpdateStatusFormRedux = reduxForm<any>({form: "DialogAddMessageForm"})(UpdateStatusForm)
+
 
 export default ProfileStatus;

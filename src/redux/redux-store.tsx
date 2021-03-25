@@ -2,11 +2,10 @@ import {applyMiddleware, combineReducers, createStore} from "redux";
 import { reducer as formReducer } from 'redux-form'
 import ProfileReducer, {
     AddPostActionType,
-    ChangePostActionType,
     SetUserProfileActionType,
     SetUserStatusActionType
 } from "./profileReducer";
-import DialogsReducer, {SendMessageActionType, UpdateNewMessageActionType} from "./dialogsReducer";
+import DialogsReducer, {SendMessageActionType} from "./dialogsReducer";
 import UserReducer, {
     FollowActionType,
     SetCurrentPageActionType, setIsFetchingActionType, setIsFollowingToggleActionType,
@@ -18,9 +17,7 @@ import AuthReducer, {SetUsersDataActionType} from "./AuthReducer";
 import thunkMiddleware from 'redux-thunk';
 
 export type ActionsTypes = AddPostActionType |
-    ChangePostActionType |
     SendMessageActionType |
-    UpdateNewMessageActionType |
     FollowActionType |
     UnfollowActionType |
     SetUsersActionType |
