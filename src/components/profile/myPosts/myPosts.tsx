@@ -1,8 +1,8 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import s from './myPosts.module.css'
 import {Post} from "./posts/Post";
 import {MapDispatchToPropsType, MapStateToPropsType} from "./posts/myPostsContainer";
-import {Field, InjectedFormProps, reduxForm} from "redux-form";
+import {AddPostFormRedux} from "../AddPostForm/AddPostForm";
 
 export type PostType = {
     id: number
@@ -38,18 +38,3 @@ export function MyPosts(props: MapStateToPropsType & MapDispatchToPropsType) {
         </div>
     )
 }
-
-const AddPostForm: React.FC<InjectedFormProps<any>> = (props:any) => {
-    return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field component={"textarea"} name={"newPost"} placeholder={"enter your post"} />
-            </div>
-            <div>
-                <button>Add post</button>
-            </div>
-        </form>
-    )
-}
-
-const AddPostFormRedux = reduxForm<any>({form: "DialogAddMessageForm"})(AddPostForm)

@@ -6,11 +6,19 @@ import {
     InitialUsersType,
     setCurrentPage,
     unfollow, toggleFollowingProgress, GetUsersTC,
-} from "../../redux/UserReducer";
+} from "../../redux/userReducer";
 import {Users} from "./Users";
 import Preloader from "../../common/Preloader/Preloader";
 import {WithAusRedirect} from "../HOC/WithAuthRedirect";
 import {compose} from "redux";
+import {
+    GetCurrentPage, GetFollowed,
+    GetFollowingInProgress,
+    GetIsFetching,
+    GetPageSize,
+    GetTotalUsersCount,
+    GetUsers
+} from "../../redux/users-selectors";
 
 
 type APIUsersType = {
@@ -59,13 +67,13 @@ class UsersAPIComponent extends React.Component<APIUsersType> {
 
 let mapStateToProps = (state: RootStateRedux) => {
     return {
-        users: state.UsersReducer.users,
-        pageSize: state.UsersReducer.pageSize,
-        totalUsersCount: state.UsersReducer.totalUsersCount,
-        currentPage: state.UsersReducer.currentPage,
-        isFetching: state.UsersReducer.isFetching,
-        followingInProgress: state.UsersReducer.followingInProgress,
-        followed:state.UsersReducer.followed
+        users: GetUsers(state),
+        pageSize: GetPageSize(state),
+        totalUsersCount: GetTotalUsersCount(state),
+        currentPage: GetCurrentPage(state),
+        isFetching: GetIsFetching(state),
+        followingInProgress: GetFollowingInProgress(state),
+        followed:GetFollowed(state),
     }
 };
 

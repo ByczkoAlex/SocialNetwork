@@ -10,7 +10,10 @@ import {compose} from "redux";
 
 type MapStateToPropsType = {
     profile: ProfileAPIType | null
-    status: string
+    status: string,
+    authorizedUserId: number | null,
+    isAuth: boolean | null
+
 }
 
 type MapDispatchToPropsType = {
@@ -46,7 +49,9 @@ class ProfileContainer extends React.Component <ProfileContainerType>{
 
 let mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
     profile: state.ProfileReducer.profilePage.profile,
-    status: state.ProfileReducer.profilePage.status
+    status: state.ProfileReducer.profilePage.status,
+    authorizedUserId: state.AuthReducer.id,
+    isAuth: state.AuthReducer.isAuth
 })
 
 export default compose(

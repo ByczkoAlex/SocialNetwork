@@ -1,5 +1,5 @@
 import {ActionsTypes} from "./redux-store";
-import {PhotosType} from "./UserReducer";
+import {PhotosType} from "./userReducer";
 import {Dispatch} from "redux";
 import {ProfileAPI, UsersAPI} from "../api/Api";
 

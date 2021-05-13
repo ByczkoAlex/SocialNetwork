@@ -5,6 +5,9 @@ import Message from "./Messages/Messages";
 import {MapStateToPropsType1, MapDispatchToPropsType1} from './dialogsContainer';
 import {InjectedFormProps, Field} from "redux-form";
 import {reduxForm} from "redux-form";
+import {Textarea} from "../../common/FormControll/FormControll";
+import {maxLengthCreator, requiredField} from "../../utils/validators/validators";
+import {AddMessageFormRedux} from "./AddMessageForm/AddMessageForm";
 
 export type MessageType = {
     id: number
@@ -15,9 +18,6 @@ export type DialogType = {
     name: string
 }
 
-type FormDataType = {
-    newMessageBody: string
-}
 
 function Dialogs(props: MapStateToPropsType1 & MapDispatchToPropsType1) {
 
@@ -48,19 +48,5 @@ function Dialogs(props: MapStateToPropsType1 & MapDispatchToPropsType1) {
 
     )
 }
-
-const AddMessageForm: React.FC<InjectedFormProps<FormDataType>> = (props:any) => {
-    return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field component={"textarea"} name={"newMessageBody"} placeholder={"enter your message"} />
-            </div>
-            <div><button>send</button></div>
-        </form>
-    )
-}
-
-const AddMessageFormRedux = reduxForm<any>({form: "DialogAddMessageForm"})(AddMessageForm)
-
 
 export default Dialogs

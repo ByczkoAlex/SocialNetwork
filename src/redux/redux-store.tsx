@@ -11,10 +11,11 @@ import UserReducer, {
     SetCurrentPageActionType, setIsFetchingActionType, setIsFollowingToggleActionType,
     SetUsersActionType, setUsersTotalCountActionType,
     UnfollowActionType
-} from "./UserReducer";
-import UsersReducer from "./UserReducer";
-import AuthReducer, {SetUsersDataActionType} from "./AuthReducer";
+} from "./userReducer";
+import UsersReducer from "./userReducer";
+import AuthReducer, {SetUsersDataActionType} from "./authReducer";
 import thunkMiddleware from 'redux-thunk';
+import AppReducer, {SetInitializedActionType} from "./appReducer";
 
 export type ActionsTypes = AddPostActionType |
     SendMessageActionType |
@@ -27,7 +28,8 @@ export type ActionsTypes = AddPostActionType |
     SetUserProfileActionType |
     SetUsersDataActionType |
     setIsFollowingToggleActionType |
-    SetUserStatusActionType
+    SetUserStatusActionType |
+    SetInitializedActionType
 
 
 
@@ -38,6 +40,7 @@ let RootReducer = combineReducers({
     DialogsReducer,
     UsersReducer,
     AuthReducer,
+    AppReducer,
     form: formReducer
     // SidebarReducer
 });
