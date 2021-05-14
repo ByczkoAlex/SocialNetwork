@@ -20,28 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/FormControll/FormControll.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/FormControll/FormControll.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/AddMessageForm/AddMessageForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/AddPostForm/AddPostForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/appReducer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/users-selectors.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validators/validators.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/dialogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/UserReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/userReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HOC/WithAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HOC/WithAuthRedirect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/appReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/appReducer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +147,7 @@
       <workItem from="1619512351600" duration="5378000" />
       <workItem from="1620294178174" duration="7024000" />
       <workItem from="1620462244325" duration="17000" />
-      <workItem from="1620895974853" duration="9810000" />
+      <workItem from="1620895974853" duration="14426000" />
     </task>
     <servers />
   </component>

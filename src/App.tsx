@@ -1,7 +1,7 @@
 import React, {ComponentClass} from 'react';
 import './App.css';
 import {Nav} from "./components/Nav/Nav";
-import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, withRouter} from 'react-router-dom';
 import NewsContainer from "./components/News/News";
 import MusicContainer from "./components/Music/Music";
 import SettingsContainer from "./components/Settings/Settings";
@@ -12,20 +12,21 @@ import Login from "./components/Login/Login";
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import {connect} from "react-redux";
 import {RootStateRedux} from "./redux/redux-store";
+import {compose} from "redux";
 import {AuthMeTC} from "./redux/authReducer";
-import {AnyAction, compose, Dispatch} from "redux";
-import {initializeApp} from "./redux/appReducer";
+
 
 export type mapDispatchToProps = {
     // initializeApp: () => (dispatch: Dispatch<AnyAction>) => void
 }
 
 
-class App extends React.Component {
 
-    // componentDidMount() {
-    //     this.props.initializeApp();
-    // }
+class App extends React.Component<any> {
+
+    componentDidMount() {
+        this.props.AuthMeTC()
+    }
 
     render() {
         return (
@@ -55,4 +56,4 @@ const mapStateToProps = (state: RootStateRedux) => {
 
 export default compose(
     withRouter,
-    connect<any, mapDispatchToProps, any, RootStateRedux>(mapStateToProps,{})) (App)  as ComponentClass;
+    connect<any, mapDispatchToProps, any, RootStateRedux>(mapStateToProps,{AuthMeTC})) (App)  as ComponentClass;

@@ -1,9 +1,6 @@
 import React from "react";
 import {ActionsTypes, rootReducerType} from "./redux-store";
-import {Dispatch} from "redux";
-import {AuthAPI} from "../api/Api";
 import { ThunkDispatch } from 'redux-thunk'
-import {stopSubmit} from "redux-form";
 import {AuthMeTC} from "./authReducer";
 
 const SET_INITIALIZED = "SET_INITIALIZED"
