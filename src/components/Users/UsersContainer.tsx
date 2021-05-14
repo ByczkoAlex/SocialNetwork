@@ -17,7 +17,7 @@ import {
     GetIsFetching,
     GetPageSize,
     GetTotalUsersCount,
-    GetUsers
+    GetUsers,
 } from "../../redux/users-selectors";
 
 

@@ -20,10 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HOC/WithAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HOC/WithAuthRedirect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/appReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/appReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-selectors.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-selectors.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +60,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/ProfileStatus" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\alex\social\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\alex\social\src\components\profile" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\components\profile\ProfileStatus" />
       <recent name="D:\alex\social\src\redux" />
       <recent name="D:\alex\social\src\common\FormControll" />
       <recent name="D:\alex\social\src\components\header" />
+      <recent name="D:\alex\social\src\components\profile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\alex\social\src\components\profile" />
     </key>
   </component>
@@ -148,6 +154,7 @@
       <workItem from="1620294178174" duration="7024000" />
       <workItem from="1620462244325" duration="17000" />
       <workItem from="1620895974853" duration="14426000" />
+      <workItem from="1620981931509" duration="7662000" />
     </task>
     <servers />
   </component>
