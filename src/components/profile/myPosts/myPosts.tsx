@@ -4,21 +4,13 @@ import {Post} from "./posts/Post";
 import {MapDispatchToPropsType, MapStateToPropsType} from "./posts/myPostsContainer";
 import {AddPostFormRedux} from "../AddPostForm/AddPostForm";
 
-export type PostType = {
-    id: number
-    message: string
-    likes: string
-}
-
-export function MyPosts(props: MapStateToPropsType & MapDispatchToPropsType) {
-
+export const MyPosts = React.memo((props: MapStateToPropsType & MapDispatchToPropsType) => {
     let posts = props.posts;
-
     let postsElements = posts.map((p: PostType) => <Post key={p.id} message={p.message}
                                                          likes={p.likes}/>);
 
 
-    const AddNewPost = (values:any) => {
+    const AddNewPost = (values: any) => {
         props.addPost(values.newPost)
     }
 
@@ -37,4 +29,10 @@ export function MyPosts(props: MapStateToPropsType & MapDispatchToPropsType) {
             </div>
         </div>
     )
+})
+
+export type PostType = {
+    id: number
+    message: string
+    likes: string
 }

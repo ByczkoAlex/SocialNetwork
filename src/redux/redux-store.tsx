@@ -1,7 +1,7 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import { reducer as formReducer } from 'redux-form'
 import ProfileReducer, {
-    AddPostActionType,
+    AddPostActionType, DeletePostActionType,
     SetUserProfileActionType,
     SetUserStatusActionType
 } from "./profileReducer";
@@ -29,7 +29,8 @@ export type ActionsTypes = AddPostActionType |
     SetUsersDataActionType |
     setIsFollowingToggleActionType |
     SetUserStatusActionType |
-    SetInitializedActionType
+    SetInitializedActionType |
+    DeletePostActionType
 
 
 

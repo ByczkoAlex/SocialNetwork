@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@testdeck/mocha": "^0.1.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -17,6 +18,9 @@
     "@types/redux-form": "^8.3.1",
     "@types/redux-thunk": "^2.1.0",
     "axios": "^0.20.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -54,6 +58,8 @@
   "devDependencies": {
     "@nuxt/types": "^2.14.7",
     "@nuxt/typescript-build": "^2.0.3",
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
     "gh-pages": "^3.1.0",
     "typescript": "^3.9.7"
   }

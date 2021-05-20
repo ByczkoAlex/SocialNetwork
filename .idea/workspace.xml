@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/profileReducer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-selectors.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-selectors.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/myPosts/myPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,22 +59,71 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/ProfileStatus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\alex\social\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\components\profile" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\alex\social\src\components\profile\ProfileStatus" />
       <recent name="D:\alex\social\src\redux" />
+      <recent name="D:\alex\social\src\components\profile\ProfileStatus" />
       <recent name="D:\alex\social\src\common\FormControll" />
       <recent name="D:\alex\social\src\components\header" />
       <recent name="D:\alex\social\src\components\profile" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\alex\social\src\components\profile" />
-    </key>
+  </component>
+  <component name="RunManager" selected="Jest.after deleting length of messages should be decrement">
+    <configuration name="New post text should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="New post text should be correct" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="after deleting length of messages should be decrement" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="after deleting length of messages should be decrement" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="length of posts should be incremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="length of posts should be incremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.after deleting length of messages should be decrement" />
+        <item itemvalue="Jest.length of posts should be incremented" />
+        <item itemvalue="Jest.New post text should be correct" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -154,7 +202,10 @@
       <workItem from="1620294178174" duration="7024000" />
       <workItem from="1620462244325" duration="17000" />
       <workItem from="1620895974853" duration="14426000" />
-      <workItem from="1620981931509" duration="7662000" />
+      <workItem from="1620981931509" duration="8265000" />
+      <workItem from="1621330057816" duration="4631000" />
+      <workItem from="1621496084890" duration="1278000" />
+      <workItem from="1621498448357" duration="3107000" />
     </task>
     <servers />
   </component>
@@ -174,6 +225,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1621499969520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621499969520" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614930807370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -182,22 +237,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620462259110" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1614587811599">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621501531933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1614587811599">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621501531933" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1621501531933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1614587811599">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621501531933" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1621501531933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1614587811599">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621501531933" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1621501531933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614587811599" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621501531933" />
     <state x="570" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1617008292536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -210,10 +265,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617281232651" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619510708140">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621343729085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619510708140" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1621343729085" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
