@@ -1,7 +1,7 @@
 import React, {ComponentClass} from 'react';
 import './App.css';
 import {Nav} from "./components/Nav/Nav";
-import {BrowserRouter, Redirect, Route, withRouter} from 'react-router-dom';
+import {HashRouter, Route, withRouter} from 'react-router-dom';
 import NewsContainer from "./components/News/News";
 import MusicContainer from "./components/Music/Music";
 import SettingsContainer from "./components/Settings/Settings";
@@ -30,7 +30,7 @@ class App extends React.Component<any> {
 
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter basename={process.env.PUBLIC_URL}>
                 <div className="app_wrapper">
                     <HeaderContainer/>
                     <Nav/>
@@ -44,7 +44,7 @@ class App extends React.Component<any> {
                         <Route path="/login" render={() => <Login/>}/>
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
