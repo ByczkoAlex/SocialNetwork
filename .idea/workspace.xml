@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/ObjectHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/PaginationComponent/PaginationComponent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/PaginationComponent/PaginationComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/userReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/userReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/PaginationComponent/PaginationComponent" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,23 +57,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common/PaginationComponent" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\alex\social\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\utils\js" />
+      <recent name="D:\alex\social\src\components\profile" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\common\PaginationComponent" />
       <recent name="D:\alex\social\src\utils\js" />
       <recent name="D:\alex\social\src\redux" />
       <recent name="D:\alex\social\src\components\profile\ProfileStatus" />
       <recent name="D:\alex\social\src\common\FormControll" />
-      <recent name="D:\alex\social\src\components\header" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\alex\social\src\utils\js" />
-      <recent name="D:\alex\social\src\components\profile" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.get sum">
@@ -234,7 +234,7 @@
       <workItem from="1621527163527" duration="51000" />
       <workItem from="1621528293052" duration="662000" />
       <workItem from="1621858446775" duration="3056000" />
-      <workItem from="1621864929329" duration="44000" />
+      <workItem from="1621864929329" duration="6045000" />
     </task>
     <servers />
   </component>

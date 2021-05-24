@@ -3,12 +3,13 @@ import styles from "./Users.module.css";
 import userPhoto from "../../assets/images/users.png";
 import {InitialUsersType} from "../../redux/userReducer";
 import {NavLink} from "react-router-dom";
+import Paginator from "../../common/PaginationComponent/PaginationComponent";
 
 type UsersType = {
     users: Array<InitialUsersType>
     follow: (userId: number) => void
     unfollow: (userId: number) => void
-    totalUsersCount: number
+    totalItemsCount: number
     pageSize: number
     currentPage: number
     onPageChanged: (pageNumber: number) => void
@@ -18,7 +19,7 @@ type UsersType = {
 
 export let Users = (props: UsersType) => {
 
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let pagesCount = Math.ceil(props.totalItemsCount / props.pageSize);
 
     let pages = [];
     for (let i = 1; i < pagesCount; i++) {
@@ -28,14 +29,15 @@ export let Users = (props: UsersType) => {
 
     return (
         <div>
-            <div className={styles.pointer}>
-                {pages.map(p => {
-                    return <span className={props.currentPage === p ? styles.selected : ""}
-                                 onClick={(e) => {
-                                     props.onPageChanged(p)
-                                 }}> {p} </span>
-                })}
-            </div>
+            <Paginator currentPage={props.currentPage} pageSize={props.pageSize} onPageChanged={props.onPageChanged} portionSize={10} totalItemsCount={props.totalItemsCount}/>
+            {/*<div className={styles.pointer}>*/}
+            {/*    {pages.map(p => {*/}
+            {/*        return <span className={props.currentPage === p ? styles.selected : ""}*/}
+            {/*                     onClick={(e) => {*/}
+            {/*                         props.onPageChanged(p)*/}
+            {/*                     }}> {p} </span>*/}
+            {/*    })}*/}
+            {/*</div>*/}
             {props.users.map((u) => <div key={u.id}>
                     <span>
                         <div>
