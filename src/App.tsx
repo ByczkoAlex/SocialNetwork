@@ -1,7 +1,7 @@
 import React, {ComponentClass} from 'react';
 import './App.css';
 import {Nav} from "./components/Nav/Nav";
-import {HashRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, withRouter, Switch} from 'react-router-dom';
 import NewsContainer from "./components/News/News";
 import MusicContainer from "./components/Music/Music";
 import SettingsContainer from "./components/Settings/Settings";
@@ -21,7 +21,6 @@ export type mapDispatchToProps = {
 }
 
 
-
 class App extends React.Component<any> {
 
     componentDidMount() {
@@ -30,11 +29,11 @@ class App extends React.Component<any> {
 
     render() {
         return (
-            <HashRouter basename={process.env.PUBLIC_URL}>
-                <div className="app_wrapper">
-                    <HeaderContainer/>
-                    <Nav/>
-                    <div className="app_wrapper_content">
+            <div className="app_wrapper">
+                <HeaderContainer/>
+                <Nav/>
+                <div className="app_wrapper_content">
+                    <Switch>
                         <Route path="/dialogs" render={() => <DialogsContainer/>}/>
                         <Route path="/profile/:userId?" render={() => <ProfileContainer/>}/>
                         <Route path="/users" render={() => <UsersContainer/>}/>
@@ -42,9 +41,9 @@ class App extends React.Component<any> {
                         <Route path="/music" render={() => <MusicContainer/>}/>
                         <Route path="/settings" render={() => <SettingsContainer/>}/>
                         <Route path="/login" render={() => <Login/>}/>
-                    </div>
+                    </Switch>
                 </div>
-            </HashRouter>
+            </div>
         );
     }
 }
@@ -56,4 +55,4 @@ const mapStateToProps = (state: RootStateRedux) => {
 
 export default compose(
     withRouter,
-    connect<any, mapDispatchToProps, any, RootStateRedux>(mapStateToProps,{AuthMeTC})) (App)  as ComponentClass;
+    connect<any, mapDispatchToProps, any, RootStateRedux>(mapStateToProps, {AuthMeTC}))(App) as ComponentClass;

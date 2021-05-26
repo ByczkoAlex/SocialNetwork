@@ -45,18 +45,18 @@ const ProfileStatusWithHooks = (props: PropsType) => {
 
 
 }
-
-const UpdateStatusForm: React.FC<InjectedFormProps<any>> = (props: any) => {
-    return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field component={"textarea"} name={"newStatus"} placeholder={"enter your status"}/>
-            </div>
-        </form>
-    )
-}
-
-const UpdateStatusFormRedux = reduxForm<any>({form: "DialogAddMessageForm"})(UpdateStatusForm)
+//
+// const UpdateStatusForm: React.FC<InjectedFormProps<any>> = (props: any) => {
+//     return (
+//         <form onSubmit={props.handleSubmit}>
+//             <div>
+//                 <Field component={"textarea"} name={"newStatus"} placeholder={"enter your status"}/>
+//             </div>
+//         </form>
+//     )
+// }
+//
+// const UpdateStatusFormRedux = reduxForm<any>({form: "DialogAddMessageForm"})(UpdateStatusForm)
 
 
 export default ProfileStatusWithHooks;

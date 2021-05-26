@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/PaginationComponent/PaginationComponent.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/PaginationComponent/PaginationComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/OneUser.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/PaginationComponent/PaginationComponent" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/FormControll/FormControll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/FormControll/FormControll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validators/validators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators/validators.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,23 +61,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common/PaginationComponent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\alex\social\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\alex\social\src\utils\js" />
-      <recent name="D:\alex\social\src\components\profile" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\components\Users" />
       <recent name="D:\alex\social\src\common\PaginationComponent" />
       <recent name="D:\alex\social\src\utils\js" />
       <recent name="D:\alex\social\src\redux" />
       <recent name="D:\alex\social\src\components\profile\ProfileStatus" />
-      <recent name="D:\alex\social\src\common\FormControll" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\alex\social\src\utils\js" />
+      <recent name="D:\alex\social\src\components\profile" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.get sum">
@@ -234,7 +238,10 @@
       <workItem from="1621527163527" duration="51000" />
       <workItem from="1621528293052" duration="662000" />
       <workItem from="1621858446775" duration="3056000" />
-      <workItem from="1621864929329" duration="6045000" />
+      <workItem from="1621864929329" duration="6388000" />
+      <workItem from="1621927148889" duration="25000" />
+      <workItem from="1622023555205" duration="1704000" />
+      <workItem from="1622025270557" duration="5269000" />
     </task>
     <servers />
   </component>
@@ -266,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614930807370" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1621860028350">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1621927170051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621860028350" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621927170051" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621863344073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -294,10 +301,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="514" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1619510241583" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1617281232651">
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1622026677326">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617281232651" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622026677326" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621343729085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
