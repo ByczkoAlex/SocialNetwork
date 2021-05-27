@@ -1,7 +1,7 @@
 import React, {ComponentClass} from 'react';
 import './App.css';
 import {Nav} from "./components/Nav/Nav";
-import {BrowserRouter, HashRouter, Route, withRouter, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, withRouter, Switch} from 'react-router-dom';
 import NewsContainer from "./components/News/News";
 import MusicContainer from "./components/Music/Music";
 import SettingsContainer from "./components/Settings/Settings";
@@ -10,8 +10,8 @@ import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
-import {connect} from "react-redux";
-import {RootStateRedux} from "./redux/redux-store";
+import {connect, Provider} from "react-redux";
+import {RootStateRedux, store} from "./redux/redux-store";
 import {compose} from "redux";
 import {AuthMeTC} from "./redux/authReducer";
 
@@ -53,6 +53,16 @@ const mapStateToProps = (state: RootStateRedux) => {
 }
 
 
-export default compose(
+let AppContainer = compose(
     withRouter,
     connect<any, mapDispatchToProps, any, RootStateRedux>(mapStateToProps, {AuthMeTC}))(App) as ComponentClass;
+
+const MainApp = () => {
+    return <BrowserRouter basename="">
+        <Provider store={store}>
+            <AppContainer/>
+        </Provider>
+    </BrowserRouter>
+}
+
+export default MainApp
