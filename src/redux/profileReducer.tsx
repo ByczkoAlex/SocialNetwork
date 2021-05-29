@@ -7,6 +7,7 @@ const ADD_POST = "ADD-POST";
 const DELETE_POST = "DELETE-POST";
 const SET_USER_PROFILE = "SET_USER_PROFILE";
 const SET_STATUS = "SET_STATUS";
+const SAVE_PHOTO_SUCCESS = "SAVE_PHOTO_SUCCESS";
 
 export const AddPostActionCreator = (newPost: string): AddPostActionType => ({
     type: ADD_POST,
@@ -42,6 +43,15 @@ export const setStatus = (status: string): SetUserStatusActionType => ({
 export type SetUserStatusActionType = {
     type: typeof SET_STATUS,
     status: string
+}
+
+export const savePhotoSuccess = (photos: PhotosType): savePhotoSuccessActionType => ({
+    type: SAVE_PHOTO_SUCCESS,
+    photos
+});
+export type savePhotoSuccessActionType = {
+    type: typeof SAVE_PHOTO_SUCCESS,
+    photos: PhotosType
 }
 
 export type PostType = {
@@ -83,6 +93,13 @@ export const updateStatus = (status: string) => async (dispatch: Dispatch) => {
     let response = await ProfileAPI.updateStatus(status)
     if (response.data.resultCode === 0) {
         dispatch(setStatus(status));
+    }
+}
+
+export const savePhoto = (file: any) => async (dispatch: Dispatch) => {
+    let response = await ProfileAPI.savePhoto(file)
+    if (response.data.resultCode === 0) {
+        dispatch(savePhotoSuccess(response.data.data.photos));
     }
 }
 
@@ -139,6 +156,22 @@ const ProfileReducer = (state: InitialProfileType = initialState, action: Action
                     ...state.profilePage,
                     postsData: [...state.profilePage.postsData.filter(p => p.id != action.postId)],
                 }
+            }
+        }
+        case SAVE_PHOTO_SUCCESS : {
+            if (state.profilePage.profile) {
+                return {
+                    ...state,
+                    profilePage: {
+                        ...state.profilePage,
+                        profile: {
+                            ...state.profilePage.profile,
+                            photos: action.photos
+                        }
+                    }
+                }
+            } else {
+                return state;
             }
         }
         default :

@@ -14,9 +14,8 @@ const instance = axios.create({
 })
 
 
-
 export const UsersAPI = {
-    getUsers(currentPage: number, pageSize: number)  {
+    getUsers(currentPage: number, pageSize: number) {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`,)
             .then(
                 response => response.data
@@ -42,7 +41,16 @@ export const ProfileAPI = {
         return instance.get(`profile/status/` + userId)
     },
     updateStatus(status: string) {
-        return instance.put('profile/status', {status: status} )
+        return instance.put('profile/status', {status: status})
+    },
+    savePhoto(photoFile: any) {
+        const formData = new FormData();
+        formData.append("image", photoFile);
+        return instance.put('profile/photo', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
     }
 }
 
@@ -50,11 +58,11 @@ export const AuthAPI = {
     me() {
         return instance.get(`auth/me`, settings)
     },
-    login( email: string, password: string, rememberMe = false) {
-        return instance.post(`auth/login`, { email, password, rememberMe},settings)
+    login(email: string, password: string, rememberMe = false) {
+        return instance.post(`auth/login`, {email, password, rememberMe}, settings)
     },
     logout() {
-        return instance.delete(`auth/login`,settings)
+        return instance.delete(`auth/login`, settings)
     }
 }
 

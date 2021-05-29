@@ -6,10 +6,8 @@ import NewsContainer from "./components/News/News";
 import MusicContainer from "./components/Music/Music";
 import SettingsContainer from "./components/Settings/Settings";
 import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
-import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import {connect, Provider} from "react-redux";
 import {RootStateRedux, store} from "./redux/redux-store";
 import {compose} from "redux";
@@ -19,6 +17,9 @@ import {AuthMeTC} from "./redux/authReducer";
 export type mapDispatchToProps = {
     // initializeApp: () => (dispatch: Dispatch<AnyAction>) => void
 }
+
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/dialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./components/profile/ProfileContainer'));
 
 
 class App extends React.Component<any> {
@@ -34,7 +35,16 @@ class App extends React.Component<any> {
                 <Nav/>
                 <div className="app_wrapper_content">
                     <Switch>
-                        <Route path="/dialogs" render={() => <DialogsContainer/>}/>
+                        <Route path="/dialogs" render={() => {
+                            return <React.Suspense fallback={<div>Loading...</div>}>
+                                <DialogsContainer/>
+                            </React.Suspense>
+                        }}/>
+                        <Route path="/profile/:userId?" render={() => {
+                            return <React.Suspense fallback={<div>Loading...</div>}>
+                                <ProfileContainer/>
+                            </React.Suspense>
+                        }}/>
                         <Route path="/profile/:userId?" render={() => <ProfileContainer/>}/>
                         <Route path="/users" render={() => <UsersContainer/>}/>
                         <Route path="/news" render={() => <NewsContainer/>}/>

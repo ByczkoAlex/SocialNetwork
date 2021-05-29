@@ -60,8 +60,8 @@ export type setIsFetchingActionType = {
     type: typeof TOGGLE_IS_FETCHING
 }
 export type PhotosType = {
-    small: string | undefined
-    large: string | undefined
+    small: string
+    large: string
 }
 export type LocationType = {
     city: string
