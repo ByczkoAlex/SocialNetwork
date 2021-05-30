@@ -20,17 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43084714-849c-420b-bd07-e84ced988e52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/HOC/WithSuspense.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileDataForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileStatus/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/userReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/userReducer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +256,8 @@
       <workItem from="1622134866071" duration="2000" />
       <workItem from="1622197121389" duration="682000" />
       <workItem from="1622278970224" duration="11148000" />
-      <workItem from="1622291519394" duration="358000" />
+      <workItem from="1622291519394" duration="1261000" />
+      <workItem from="1622363016927" duration="16939000" />
     </task>
     <servers />
   </component>
@@ -309,10 +309,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1622110729611" />
-    <state x="570" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1622287724667">
+    <state x="570" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1622382364978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="570" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1622287724667" />
+    <state x="570" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1622382364978" />
     <state x="514" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1619510241583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -321,21 +321,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622026677326" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621343729085">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1622370521648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1621343729085" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/redux/dialogsReducer.tsx</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622370521648" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/social$after_deleting_length_should_not_be_decrement_if_id_is_incorrect.info" NAME="after deleting length should not be decrement if id is incorrect Coverage Results" MODIFIED="1621501893330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -47,7 +47,7 @@ const AuthReducer = (state: InitialType = initialState, action: ActionsTypes): I
 export const AuthMeTC = () => async (dispatch: Dispatch) => {
     let response = await AuthAPI.me();
     if (response.data.resultCode === 0) {
-        let {id, email, login} = response.data
+        let {id, email, login} = response.data.data
         dispatch(SetUsersData(id, email, login, true));
     }
 };

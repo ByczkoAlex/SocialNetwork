@@ -1,7 +1,8 @@
-import {ActionsTypes} from "./redux-store";
+import {ActionsTypes, AppStateType, rootReducerType, RootStateRedux} from "./redux-store";
 import {PhotosType} from "./userReducer";
 import {Dispatch} from "redux";
 import {ProfileAPI, UsersAPI} from "../api/Api";
+import {ThunkDispatch, ThunkAction} from "redux-thunk";
 
 const ADD_POST = "ADD-POST";
 const DELETE_POST = "DELETE-POST";
@@ -60,6 +61,7 @@ export type PostType = {
     likes: string
 }
 export type ProfileAPIType = {
+    aboutMe : string
     userId: number
     lookingForAJob: boolean
     lookingForAJobDescription: string
@@ -100,6 +102,16 @@ export const savePhoto = (file: any) => async (dispatch: Dispatch) => {
     let response = await ProfileAPI.savePhoto(file)
     if (response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos));
+    }
+}
+
+export const saveProfile = (profile: any):ThunkAction<Promise<void>,AppStateType, unknown, ActionsTypes> => async (dispatch, getState) => {
+    const userId = getState().AuthReducer.id
+    const state = getState()
+    const response = await ProfileAPI.saveProfile(profile)
+    debugger
+    if (response.data.resultCode === 0) {
+        dispatch(getUserProfile(userId!));
     }
 }
 

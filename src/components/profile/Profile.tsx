@@ -9,6 +9,7 @@ type ProfilePropsType = {
     updateStatus: (status: string) => void
     isOwner:boolean
     savePhoto: (file: any)=> void
+    saveProfile: (FormData: any) => void
 }
 
 
@@ -16,6 +17,7 @@ export function Profile(props: ProfilePropsType) {
     return (
         <div>
             <ProfileInfo
+                saveProfile={props.saveProfile}
                 isOwner={props.isOwner}
                 status={props.status}
                 profile={props.profile}
