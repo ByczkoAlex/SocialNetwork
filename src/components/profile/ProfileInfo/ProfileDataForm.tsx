@@ -31,7 +31,7 @@ export const ProfileDataForm = (props: any) => {
         <div>
             <b>Contacts</b>: {Object.keys(props.initialValues.contacts).map(key => {
             debugger
-            return <div className={s.contact}>
+            return <div key={key} className={s.contact}>
                 <b>{key}: {createField(key, [], "contacts." + key, Input, null, null)}</b>
             </div>
         })}

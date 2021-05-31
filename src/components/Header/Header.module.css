@@ -3,7 +3,11 @@
     background-color: #0f431c;
     margin-bottom: 5px;
     /*box-shadow: 5px 5px 5px 5px rgba(0.16, 0, 0, 0.16);*/
+}
 
+.loginName {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header img {

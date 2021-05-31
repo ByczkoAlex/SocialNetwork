@@ -13,7 +13,7 @@ import UserReducer, {
     UnfollowActionType
 } from "./userReducer";
 import UsersReducer from "./userReducer";
-import AuthReducer, {SetUsersDataActionType} from "./authReducer";
+import AuthReducer, {GetCaptchaUrlActionType, SetUsersDataActionType} from "./authReducer";
 import thunkMiddleware from 'redux-thunk';
 import AppReducer, {SetInitializedActionType} from "./appReducer";
 
@@ -31,7 +31,8 @@ export type ActionsTypes = AddPostActionType |
     SetUserStatusActionType |
     SetInitializedActionType |
     DeletePostActionType |
-    savePhotoSuccessActionType
+    savePhotoSuccessActionType |
+    GetCaptchaUrlActionType
 
 
 
