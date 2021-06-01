@@ -19,6 +19,7 @@
     "@types/redux-thunk": "^2.1.0",
     "axios": "^0.20.0",
     "chai": "^4.3.4",
+    "classnames": "^2.3.1",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "react": "^16.13.1",

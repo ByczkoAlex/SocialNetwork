@@ -36,8 +36,6 @@ export const LoginForm : React.FC<InjectedFormProps<FormDataType, LoginFormType>
     )
 }
 
-
-
 const LoginReduxForm = reduxForm<FormDataType, {captchaUrl: string}>({form: 'email'})(LoginForm)
 
 export const Login = (props:any) => {
