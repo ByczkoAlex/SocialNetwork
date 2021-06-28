@@ -5,6 +5,7 @@ import {ProfileAPIType} from "../../../redux/profileReducer";
 import ProfileStatusWithHooks from "../ProfileStatus/ProfileStatusWithHooks";
 import users from "../../../assets/images/users.png"
 import ProfileDataFormReduxForm from "./ProfileDataForm";
+import Img from "../../../assets/images/img.jpg"
 
 export type profileType = {
     profile: ProfileAPIType | null
@@ -38,7 +39,7 @@ export function ProfileInfo(props: profileType) {
     return (
         <div>
             <div>
-                <img className={s.image} src="https://onlinepngtools.com/images/examples-onlinepngtools/desert.jpg"/>
+                <img className={s.image} src={Img}/>
             </div>
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large || users} className={s.avatar}/>
