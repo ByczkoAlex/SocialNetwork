@@ -1,16 +1,16 @@
 import React from "react";
-import {ActionsTypes, rootReducerType} from "./redux-store";
+import {InferActionsTypes, rootReducerType} from "./redux-store";
 import { ThunkDispatch } from 'redux-thunk'
 import {AuthMeTC} from "./authReducer";
 
-const SET_INITIALIZED = "SET_INITIALIZED"
+type ActionsTypes = InferActionsTypes<typeof actions>
 
-export const SetInintialized = () :
-    SetInitializedActionType => ({type: SET_INITIALIZED});
 
-export type SetInitializedActionType = {
-    type: typeof SET_INITIALIZED
+export const actions = {
+    SetInintialized : () => ({type: 'SET_INITIALIZED'} as const)
 }
+
+
 
 let initialState= {
     initialized: false
@@ -21,7 +21,7 @@ export type InitialType = typeof  initialState
 const AppReducer = (state: InitialType = initialState, action: ActionsTypes): InitialType => {
     switch (action.type) {
 
-        case SET_INITIALIZED: {
+        case 'SET_INITIALIZED': {
             return {
                 ...state,
                 initialized: true
@@ -36,9 +36,9 @@ export const initializeApp = () => {
     return (dispatch: ThunkDispatch<rootReducerType, unknown, ActionsTypes>) => {
         let promise = dispatch(AuthMeTC());
 
-        // promise.then(() => {
-        //     dispatch(SetInintialized())
-        // })
+        promise.then(() => {
+            dispatch(actions.SetInintialized())
+        })
 
     };
 };

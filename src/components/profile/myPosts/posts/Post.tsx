@@ -7,6 +7,7 @@ type PropsType = {
 }
 
 export function Post (props: PropsType) {
+
     return (
         <div className={s.item}>
             <img className={s.image} src="https://source.unsplash.com/random/800x600" alt=""/>
@@ -16,6 +17,7 @@ export function Post (props: PropsType) {
             <div>
                 {props.likes}
             </div>
+            <button>delete post</button>
         </div>
     )
 }

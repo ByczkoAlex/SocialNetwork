@@ -1,7 +1,7 @@
 import React, {ComponentClass} from 'react';
 import './App.css';
 import {Nav} from "./components/Nav/Nav";
-import {BrowserRouter, Route, withRouter, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, withRouter, Switch, HashRouter} from 'react-router-dom';
 import NewsContainer from "./components/News/News";
 import MusicContainer from "./components/Music/Music";
 import SettingsContainer from "./components/Settings/Settings";
@@ -68,11 +68,11 @@ let AppContainer = compose(
     connect<any, mapDispatchToProps, any, RootStateRedux>(mapStateToProps, {AuthMeTC}))(App) as ComponentClass;
 
 const MainApp = () => {
-    return <BrowserRouter basename="">
+    return <HashRouter basename="">
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
-export default MainApp
+export default MainApp;

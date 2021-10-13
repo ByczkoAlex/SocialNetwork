@@ -1,6 +1,6 @@
 import Dialogs from "./dialogs";
 import {connect} from "react-redux";
-import {messagesPage1, SandMessageCreator} from "../../redux/dialogsReducer";
+import {messagesPage1, actions} from "../../redux/dialogsReducer";
 import {RootStateRedux} from "../../redux/redux-store";
 import React, {ComponentClass} from "react";
 import {WithAusRedirect} from "../HOC/WithAuthRedirect";
@@ -23,7 +23,7 @@ let MapStateToProps = (state: RootStateRedux) => {
 let MapDispatchToProps = (dispatch: any): MapDispatchToPropsType1 => {
     return {
         sendMessage: (newMessageBody: string) => {
-            dispatch(SandMessageCreator(newMessageBody));
+            dispatch(actions.SandMessageCreator(newMessageBody));
         },
     }
 };

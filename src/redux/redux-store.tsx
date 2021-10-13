@@ -1,41 +1,15 @@
 import {applyMiddleware, combineReducers, createStore, compose} from "redux";
 import { reducer as formReducer } from 'redux-form'
-import ProfileReducer, {
-    AddPostActionType, DeletePostActionType, savePhotoSuccessActionType,
-    SetUserProfileActionType,
-    SetUserStatusActionType
-} from "./profileReducer";
-import DialogsReducer, {SendMessageActionType} from "./dialogsReducer";
-import UserReducer, {
-    FollowActionType,
-    SetCurrentPageActionType, setIsFetchingActionType, setIsFollowingToggleActionType,
-    SetUsersActionType, setUsersTotalCountActionType,
-    UnfollowActionType
-} from "./userReducer";
+import ProfileReducer from "./profileReducer";
+import DialogsReducer from "./dialogsReducer";
 import UsersReducer from "./userReducer";
 import AuthReducer, {GetCaptchaUrlActionType, SetUsersDataActionType} from "./authReducer";
 import thunkMiddleware from 'redux-thunk';
-import AppReducer, {SetInitializedActionType} from "./appReducer";
+import AppReducer from "./appReducer";
 
-export type ActionsTypes = AddPostActionType |
-    SendMessageActionType |
-    FollowActionType |
-    UnfollowActionType |
-    SetUsersActionType |
-    SetCurrentPageActionType |
-    setUsersTotalCountActionType |
-    setIsFetchingActionType |
-    SetUserProfileActionType |
+export type ActionsTypes =
     SetUsersDataActionType |
-    setIsFollowingToggleActionType |
-    SetUserStatusActionType |
-    SetInitializedActionType |
-    DeletePostActionType |
-    savePhotoSuccessActionType |
     GetCaptchaUrlActionType
-
-
-
 
 
 let RootReducer = combineReducers({
@@ -51,7 +25,9 @@ let RootReducer = combineReducers({
 export type rootReducerType = typeof RootReducer;
 export type AppStateType = ReturnType<rootReducerType>
 
+export type PropertiesTypes<T> = T extends {[key: string]: infer U} ? U : never
 
+export type InferActionsTypes<T extends {[key: string]: (...args: any[])=> any }> = ReturnType<PropertiesTypes<T>>
 
 export type RootStateRedux = ReturnType<typeof RootReducer>
 

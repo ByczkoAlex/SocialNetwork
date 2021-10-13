@@ -4,8 +4,7 @@ import {RootStateRedux} from "../../redux/redux-store";
 import {
     follow,
     InitialUsersType,
-    setCurrentPage,
-    unfollow, toggleFollowingProgress, GetUsersTC,
+    unfollow, GetUsersTC,
 } from "../../redux/userReducer";
 import {Users} from "./Users";
 import Preloader from "../../common/Preloader/Preloader";
@@ -78,7 +77,7 @@ let mapStateToProps = (state: RootStateRedux) => {
 };
 
 export default compose(
-    connect(mapStateToProps,{follow,unfollow,setCurrentPage,toggleFollowingProgress,GetUsersTC}),
+    connect(mapStateToProps,{follow,unfollow,GetUsersTC}),
     WithAusRedirect
 )(UsersAPIComponent) as ComponentClass
 
